@@ -27,6 +27,6 @@ public class Driver {
 		DBObject query = new BasicDBObject("title", "Mongo");
 		DBCursor cursor = collection.find(query);
 		
-		System.out.println(cursor);
+		System.out.println((String)cursor.one().get("author"));
 	}
 }
